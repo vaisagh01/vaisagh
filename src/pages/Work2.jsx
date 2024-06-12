@@ -7,7 +7,7 @@ export default function Work() {
     return (
         <div className='mx-auto rounded-3xl relative h-[75vh] hide-scroll overflow-y-scroll z-10 w-3/4'>
             
-            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg5.png" alt="" />
+            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg/bg5.png" alt="" />
 
             <p className='top-2 bg-neutral-900 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>
                 3
@@ -22,8 +22,8 @@ export default function Work() {
                     </div>
                     <p className='text-lg'>A React.js project created using TMDB API, to browse all kinds of movies and TV shows of any language and country </p>
                 </div>
-                    <motion.div onHoverStart={()=>{showOverlay(true)}} onHoverEnd={()=>{showOverlay(false)}}  className='w-1/2 relative overflow-hidden cursor-pointer'>
-                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="src\work\work1.png" alt="" />
+                    <motion.a  href='http://cinehubv2.vercel.app' target='_blank' onHoverStart={()=>{showOverlay(true)}} onHoverEnd={()=>{showOverlay(false)}}  className='w-1/2 relative overflow-hidden cursor-pointer'>
+                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="work/work1.png" alt="" />
                         <AnimatePresence>
                             {
                                 overlay &&
@@ -32,7 +32,7 @@ export default function Work() {
                                 </motion.div>
                             }
                         </AnimatePresence>
-                    </motion.div>
+                    </motion.a>
             </section>
 
         </div>

@@ -7,15 +7,15 @@ export default function Work3() {
     return (
         <div className='mx-auto rounded-3xl relative h-[75vh] hide-scroll overflow-y-scroll z-10 w-3/4'>
             
-            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg6.jpg" alt="" />
+            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg/bg6.jpg" alt="" />
 
             <p className='top-2 bg-neutral-900 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>
                 4
             </p>
             <section className='flex h-full gap-9 poppins justify-center items-center'>
                 
-                    <motion.div onHoverStart={()=>{showOverlay(true)}} onHoverEnd={()=>{showOverlay(false)}}  className='w-1/2 relative overflow-hidden cursor-pointer'>
-                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="src\work\work3.png" alt="" />
+                    <motion.a href='http://convergence-2024.web.app' target='_blank' onHoverStart={()=>{showOverlay(true)}} onHoverEnd={()=>{showOverlay(false)}}  className='w-1/2 relative overflow-hidden cursor-pointer'>
+                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="work/work3.png" alt="" />
                         <AnimatePresence>
                             {
                                 overlay &&
@@ -24,7 +24,7 @@ export default function Work3() {
                                 </motion.div>
                             }
                         </AnimatePresence>
-                    </motion.div>
+                    </motion.a>
                 <div className=' w-60 text-slate-100 flex flex-col gap-2'>
                     <h1 className='font-medium text-4xl'>Convergence 2024</h1>
                     <div className='flex gap-4'>

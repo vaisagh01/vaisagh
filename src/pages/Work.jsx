@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react';
 
+
 export default function Work() {
     const [overlay, showOverlay] = useState(false);
     return (
         <div className='mx-auto rounded-3xl relative h-[75vh] hide-scroll overflow-y-scroll z-10 w-3/4'>
             
-            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg9.jpg" alt="" />
+            <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg/bg9.jpg" alt="" />
 
             <p className='top-2 bg-neutral-900 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>2</p>
             <section className='flex h-full gap-9 poppins justify-center items-center'>
                 
                     <motion.a href='http://cinehubv2.vercel.app' target='_blank' onHoverStart={()=>{showOverlay(true)}} onHoverEnd={()=>{showOverlay(false)}}  className='w-1/2 relative overflow-hidden cursor-pointer'>
-                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="src\work\work4.png" alt="" />
+                        <motion.img whileHover={{scale:1.1}} transition={{duration:0.5}} className='w-full' src="work/work4.png" alt="" />
                         <AnimatePresence>
                             {
                                 overlay &&

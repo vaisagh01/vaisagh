@@ -10,8 +10,8 @@ export default function Landing() {
     }
     
     return (
-        <div className='mx-auto rounded-3xl relative mt-28 h-[75vh] hide-scroll overflow-hidden z-10 w-3/4'>
-            <motion.img initial={{y:-10}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full rounded-3xl absolute -z-10' src="/bg1.jpg" alt="" />
+        <div className='mx-auto rounded-3xl relative mt-28 h-[75vh] overflow-hidden z-10 w-3/4'>
+            <motion.img initial={{y:-10}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full rounded-3xl absolute -z-10' src="/bg/bg1.jpg" alt="" />
             <p className='top-2 bg-neutral-700 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>1</p>
             <section className='flex flex-col relative poppins items-start px-32 h-full justify-center gap-10'>
                 <motion.h1 initial={{opacity:0, y:50}} animate={{opacity:1, y:0}} transition={{duration:0.5,delay:0.6,ease:[0.76,0,0.24,1]}} className='text-5xl pacifico font-extralight text-white'>hello!</motion.h1>
