@@ -12,7 +12,7 @@ export default function Work() {
             <p className='absolute text-xl text-neutral-100 top-5 left-5 px-4 poppins rounded-full text-center items-center py-1'>
                 #1
             </p>
-            <section className='flex text-neutral-300 h-full gap-9 poppins justify-center items-center'>
+            <section className='flex text-neutral-300 text-8xl h-full gap-9 poppins justify-center items-center'>
                 hello
             </section>
 

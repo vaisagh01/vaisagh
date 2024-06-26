@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence,useScroll, useMotionValue, useMotionValueEvent } from 'framer-motion'
-import { X, MenuIcon, ArrowBigDownDash, Download, Home, Folder, PersonStanding, User, Paperclip, ArrowUpRight} from 'lucide-react';
+import { X, MenuIcon, ArrowUpRight} from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import HoverText from './HoverText';
 
 export default function Header() {
     const [menu, setMenu] = useState(false);
@@ -17,7 +16,7 @@ export default function Header() {
                 }
     })
     return (
-        <div className='z-40 px-10 mixblediff bg-neutral-900 w-screen flex items-center h-20'>        
+        <div className='z-40 bg-neutral-900 w-screen flex items-center h-20'>        
             <motion.div
                 variants={{
                     visible:{y:0},
@@ -25,7 +24,7 @@ export default function Header() {
                 }}
                 initial={{y:-200}}
                 animate={hidden ? "hidden" : "visible"}
-                transition={{duration:0.9, delay:1}}
+                transition={{duration:0.9,delay:0.5,ease:[0.76,0,0.24,1]}}
                 className='flex justify-center mx-auto gap-7 px-9 py-2 bg-neutral-800/40 border-neutral-600 shadow-sm shadow-neutral-900  border-[1px] rounded-full poppins text-xl text-neutral-300'>
 
                         <div className='flex h-8 overflow-hidden flex-col'>
@@ -75,8 +74,8 @@ export default function Header() {
                     initial={{opacity:0}} 
                     animate={{opacity:'100%'}} 
                     exit={{opacity:0}}
-                    transition={{duration:0.3}}
-                    className='h-screen z-10 w-screen backdrop-blur-3xl fixed top-0 right-0 flex justify-center items-center'>
+                    transition={{duration:0.5,delay:0.1,ease:[0.76,0,0.24,1]}}
+                    className='h-screen z-10 w-screen backdrop-blur-lg bg-neutral-900/10 fixed top-0 right-0 flex justify-center items-center'>
                             {
                                 menu && 
                                 <div className='flex flex-col justify-start items-center poppins text-neutral-200'>
