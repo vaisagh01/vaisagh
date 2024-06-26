@@ -12,11 +12,11 @@ export default function Contact() {
     e.preventDefault()
   }
   return (
-    <div className='mx-auto rounded-3xl relative h-[75vh] hide-scroll overflow-y-scroll z-10 w-[70vw]'>
+    <div className='mx-auto rounded-3xl relative h-[75vh] hide-scroll overflow-y-scroll z-10 w-[73vw]'>
             
             <motion.img initial={{y:0}} animate={{y:0}} transition={{duration:9, repeat:Infinity, repeatType:'reverse'}} className='w-full h-full rounded-3xl absolute -z-10' src="/bg/bg7.jpg" alt="" />
 
-            <p className='top-2 bg-neutral-900 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>2</p>
+            <p className='top-2 bg-neutral-900 rounded-full p-4 size-4 items-center poppins text-neutral-200 flex justify-center absolute right-2'>5</p>
             <section className='flex h-full gap-9 poppins justify-center items-center'>
               <form className='flex justify-center items-center gap-2 w-full h-1/2' action="mailto:vaisuro45@gmail.com" method='post'>
                 <textarea onChange={handleChange} className=' m-5 h-full w-1/2 focus:outline-none text-white p-5 rounded-3xl bg-white/30 ' placeholder='type here...'></textarea>
