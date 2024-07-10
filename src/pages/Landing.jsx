@@ -10,7 +10,7 @@ export default function Landing() {
     const text = useRef(null);
     const { scrollYProgress } = useScroll({
       target:text,
-      offset: ['start 70%','end end']
+      offset: ['start 40%','end end']
     });
     const title = useTransform(scrollYProgress, [0,1],[0,1])
     
@@ -20,14 +20,14 @@ export default function Landing() {
         style={{opacity:title}}
         className='mx-auto h-screen rounded-3xl flex items-center justify-center '>
             <section 
-            className=' flex flex-col w-3/4 gap-5 my-20 '>
+            className=' flex flex-col w-3/4 gap-5 lg:text-5xl md:text-5xl text-4xl my-20 '>
                 <motion.p   
-                className='text-5xl drop-shadow-md'>
+                className='drop-shadow-md'>
                     I am Vaisagh Suresh, I'm a student web  
                     <span 
                     className='text-neutral-100'> Developer </span>
                      and 
-                    <span className='text-neutral-200 text-5xl italic font-serif'>  designer </span> based in Bangalore. I love creating interactive
+                    <span className='text-neutral-200 italic font-serif'>  designer </span> based in Bangalore. I love creating interactive
                          websites with latest technologies
                 </motion.p>
                 

@@ -75,7 +75,7 @@ export default function Header() {
                     animate={{opacity:'100%'}} 
                     exit={{opacity:0}}
                     transition={{duration:0.5,delay:0.1,ease:[0.76,0,0.24,1]}}
-                    className='h-screen z-10 w-screen backdrop-blur-lg bg-neutral-900/10 fixed top-0 right-0 flex justify-center items-center'>
+                    className='h-screen z-10 w-screen backdrop-blur-xl bg-neutral-900/90 fixed top-0 right-0 flex justify-center items-center'>
                             {
                                 menu && 
                                 <div className='flex flex-col justify-start items-center poppins text-neutral-200'>
