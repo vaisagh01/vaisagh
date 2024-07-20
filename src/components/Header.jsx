@@ -16,7 +16,7 @@ export default function Header() {
                 }
     })
     return (
-        <div className='z-40 bg-neutral-900 w-screen flex items-center h-20'>        
+        <div className='z-40 bg-neutral-900 border-neutral-600 border-b-[1px] w-screen flex items-center h-20'>        
             <motion.div
                 variants={{
                     visible:{y:0},

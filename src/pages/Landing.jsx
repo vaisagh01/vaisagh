@@ -20,15 +20,15 @@ export default function Landing() {
         style={{opacity:title}}
         className='mx-auto h-screen rounded-3xl flex items-center justify-center '>
             <section 
-            className=' flex flex-col w-3/4 gap-5 lg:text-5xl md:text-5xl text-4xl my-20 '>
+            className=' flex flex-col border-neutral-300 border-l-[1px] pl-5 w-3/4 gap-5 lg:text-5xl md:text-5xl text-4xl my-20 '>
                 <motion.p   
                 className='drop-shadow-md'>
-                    I am Vaisagh Suresh, I'm a student web  
+                    I am Vaisagh Suresh, I'm an aspiring student web  
                     <span 
-                    className='text-neutral-100'> Developer </span>
+                    className='text-indigo-600 font-mono'> Developer </span>
                      and 
-                    <span className='text-neutral-200 italic font-serif'>  designer </span> based in Bangalore. I love creating interactive
-                         websites with latest technologies
+                    <span className='text-purple-500 italic font-serif'> designer </span> based in Bangalore. I love creating interactive
+                         websites with eye-catchy design
                 </motion.p>
                 
             </section>

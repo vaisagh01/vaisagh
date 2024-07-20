@@ -8,6 +8,7 @@ import { ArrowUpRight, MapPin, Mouse } from 'lucide-react'
 
 export default function Home() {
     const container = useRef(null);
+    const [font, setfont] = useState('poppins')
     const { scrollYProgress } = useScroll({
       target:container,
       offset: ['start start','end start']
@@ -18,6 +19,7 @@ export default function Home() {
     const sm3 = useTransform(scrollYProgress, [0,1],[1,0.9])
     const sm4 = useTransform(scrollYProgress, [0,1],[1,0.95])
     const sm5 = useTransform(scrollYProgress, [0,1],[1,1.0])
+
     return (
 
       <div className='bg-neutral-900'>        
@@ -28,7 +30,7 @@ export default function Home() {
               <motion.h1 
               style={{fontStyle:'italic'}}
               transition={{duration:0.5}}
-              className='lg:text-[220px] md:text-[140px] text-[90px] text-center -tracking-widest font-semibold'>
+              className={`lg:text-[220px] font-${font} md:text-[140px] text-[90px] text-center -tracking-widest font-semibold`}>
                 vaisagh suresh
               </motion.h1>
                 <motion.div  initial={{opacity:0, y:50}} animate={{opacity:1, y:0}} transition={{duration:0.5,delay:0.6,ease:[0.76,0,0.24,1]}}  className='flex justify-between self-center poppins'>
@@ -60,26 +62,39 @@ export default function Home() {
           </motion.section>
 
           <div className='border-t-[1px] border-neutral-500 bg-neutral-900 w-full sticky top-[0vh] h-screen uppercase font-semibold text-neutral-400'>
-              <p className='mt-72 lg:text-8xl md:text-4xl text-wrap text-6xl text-center'>My Top #3 projects</p>
+              <p className='mt-72 lg:text-xl md:text-xl text-wrap text-xl text-center'>Here are</p>
+              <p className='mt-5 lg:text-8xl md:text-4xl text-wrap text-6xl text-center'>My Top #3 projects</p>
           </div>
           
           <motion.section className='sticky top-[30px]  snap-start' style={{scale:sm2}} >
-            <Work num={1} title={"CINEHUB - A Movie App"}/>
+            <Work 
+            num={1} 
+            title={"CINEHUB - A Movie App"}
+            desc={"A MERN stack movie app inspired by prime Video."}
+            link={'https://cinehubv2.vercel.app/'}/>
           </motion.section>
           
           <motion.section className='sticky top-[50px] snap-start' style={{scale:sm3}}  >
-            <Work num={2} title={"GoogleClone - A Google Clone"}/>
+            <Work 
+            num={2} 
+            desc={"An interactive website designed for a hackathon from codedex. Created with the vibe and interactivity in mind to bring out the culture of stoop sale in Brookly, NY. Developed using React.js"}
+            title={"Scoop Sale - Chelsea and lils"}
+            link={'https://googleclonev2.vercel.app/'}/>
           </motion.section>
 
           <motion.section className='sticky top-[70px] snap-start' style={{scale:sm4}}  >
-            <Work num={3} title={"Convergence 2024"}/>
+            <Work 
+            num={3} 
+            title={"Convergence 2024"}
+            link={'https://convergence-2024.web.app/'}/>
           </motion.section>
 
           <motion.section className='' style={{scale:sm5}}  >
-            
+            hello
           </motion.section>
-          <section className='h-screen w-screen bg-neutral-900 border-t-[1px] border-neutral-500 z-20'>
-
+          <section className='h-screen flex flex-col gap-5 items-center justify-center w-screen bg-neutral-900 border-t-[1px] border-neutral-500 z-10'>
+            <h1>Send me a message </h1>
+            <input className='py-3 px-9 bg-transparent border-b-[1px] border-neutral-500 focus:outline-none' type="text" />
           </section>
           
         </div>
